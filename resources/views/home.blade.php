@@ -23,13 +23,13 @@
                             <form action="{{route('tasks.toggle', $t->id)}}" method="POST" class="d-inline">
                                 @csrf
                                 @method('PATCH')
-                                <button class="btn btn-success btn-5sm mark-done">✔</button>
+                                <button class="btn btn-success btn-primary btn-sm mark-done">✔</button>
                             </form>
-                            <button type="button" class="btn btn-warning edit-task" data-id="{{$t->id}}" data-name="{{$t->name}}">✏</button>
+                            <button class="btn btn-warning btn-primary btn-sm  edit-task" data-id="{{$t->id}}" data-name="{{$t->name}}">✏</button>
                             <form action="{{route('tasks.destroy', $t->id )}}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                            <button class="btn btn-danger btn-sm delete-task">🗑</button>
+                            <button class="btn btn-primary btn-danger btn-sm delete-task">🗑</button>
                             </form>
                     </li>
                     @endforeach
